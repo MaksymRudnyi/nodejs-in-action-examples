@@ -2,7 +2,7 @@ var fs = require('fs');
 var completedTasks = 0;
 var tasks = [];
 var wordCounts = [];
-var filesDir = './text';
+var filesDir = '../text';
 
 function checkIfComplete(){
     completedTasks++;
@@ -14,8 +14,7 @@ function checkIfComplete(){
 }
 
 function countWordsInText(text){
-    var words = text.toString().toLowerCase().split(/\W+/).sort();
-
+    var words = text.toString().toLowerCase().split(/ /).sort();
     for(var index in words){
         var word = words[index];
         if (word){
